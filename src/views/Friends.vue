@@ -4,7 +4,9 @@
       <router-link to="/menu">
         <img src="../assets/arcon_logo.png" alt="arcon logo">
       </router-link>
-      <img class="profile_pic" src="../assets/boy.jpg" alt="boy">
+      
+        <img class="profile_pic" src="../assets/boy.jpg" alt="boy">
+      
     </div>
     <div class="friends">
       <div class="friend">
@@ -43,11 +45,10 @@
 .friends {
   .friend {
     display: inline;
-    h2{
-        width: 26%;
-        display: inline;
+    h2 {
+      width: 26%;
+      display: inline;
     }
-    
     img {
       border-radius: 100%;
       display: inline-block;

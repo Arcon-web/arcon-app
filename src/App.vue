@@ -19,6 +19,7 @@ body {
   .profile_pic {
     border-radius: 100%;
     margin-bottom: 12%;
+    width: 20%;
   }
 
    .head{

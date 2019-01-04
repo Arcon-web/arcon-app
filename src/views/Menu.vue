@@ -2,7 +2,7 @@
   <div class="Menu">
     <div class="head">
       <img src="../assets/arcon_logo.png" alt="arcon logo">
-      <img class="profile_pic" src="../assets/boy.jpg" alt="boy">
+       <img class="profile_pic" src="../assets/boy.jpg" alt="boy">
     </div>
 
     <div class="buttons">
@@ -21,5 +21,7 @@
   img {
     margin-bottom: 10%;
   }
+  width: 70%;
+  margin:auto;
 }
 </style>
