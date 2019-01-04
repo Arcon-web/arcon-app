@@ -7,6 +7,7 @@
 <style lang="scss">
 body {
   background-color: #6877f5;
+  width: 100vw;
 }
 
 #app {
