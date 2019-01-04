@@ -8,19 +8,16 @@
     </div>
 
     <div class="user">
-        <h2>Name</h2>
-        <h4>Buskens</h4>
-        <h2>Prename</h2>
-        <h4>Paulien</h4>
-        <h2>Email</h2>
-        <h4>Paulien.buskens@student.kdg.be</h4>
-        <h2>Console ID</h2>
-        <h4>243825</h4>
-
+      <h2>Name</h2>
+      <img src="../assets/inputField.png" alt="input field">
+      <h2>Console ID</h2>
+      <img src="../assets/inputField.png" alt="input field">
     </div>
 
     <div class="button">
-      <img src="../assets/button_invite.png" alt="button invite">
+      <router-link to="/friends">
+        <img src="../assets/button_invite.png" alt="button invite">
+      </router-link>
     </div>
   </div>
 </template>
