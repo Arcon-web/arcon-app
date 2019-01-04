@@ -8,25 +8,26 @@
     </div>
 
     <div class="user">
-        <h2>Name</h2>
-        <h4>Buskens</h4>
-        <h2>Prename</h2>
-        <h4>Paulien</h4>
-        <h2>Email</h2>
-        <h4>Paulien.buskens@student.kdg.be</h4>
-        <h2>Console ID</h2>
-        <h4>243825</h4>
+        <h1>Homer</h1>
+        <h2>Times played</h2>
+        <h4>8</h4>
+        <h2>Wins</h2>
+        <h4>5</h4>
+        <h2>Losses</h2>
+        <h4>3</h4>
+        <h2>Last played</h2>
+        <h4>04/01/2019</h4>
 
     </div>
 
     <div class="button">
-      <img src="../assets/button_edit_profile.png" alt="button edit profile">
+      <img src="../assets/button_challenge.png" alt="button challenge">
     </div>
   </div>
 </template>
 
 <style lang="scss">
 .button {
-  margin-top: 20%;
+  margin-top: 15%;
 }
 </style>

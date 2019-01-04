@@ -1,5 +1,5 @@
 <template>
-  <div class="Profile">
+  <div class="Add">
     <div class="head">
       <router-link to="/menu">
         <img src="../assets/arcon_logo.png" alt="arcon logo">
@@ -20,7 +20,7 @@
     </div>
 
     <div class="button">
-      <img src="../assets/button_edit_profile.png" alt="button edit profile">
+      <img src="../assets/button_invite.png" alt="button invite">
     </div>
   </div>
 </template>

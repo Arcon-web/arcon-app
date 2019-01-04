@@ -4,13 +4,14 @@
       <router-link to="/menu">
         <img src="../assets/arcon_logo.png" alt="arcon logo">
       </router-link>
-      
-        <img class="profile_pic" src="../assets/boy.jpg" alt="boy">
-      
+
+      <img class="profile_pic" src="../assets/boy.jpg" alt="boy">
     </div>
     <div class="friends">
       <div class="friend">
-        <img src="../assets/homer.jpg" alt="friend">
+        <router-link to="/homer">
+          <img src="../assets/homer.jpg" alt="friend">
+        </router-link>
         <h2>Homer</h2>
       </div>
       <div class="friend">
@@ -36,7 +37,9 @@
     </div>
 
     <div class="button">
-      <img src="../assets/button_add_friend.png" alt="button add friend">
+      <router-link to="/add">
+        <img src="../assets/button_add_friend.png" alt="button add friend">
+      </router-link>
     </div>
   </div>
 </template>
@@ -48,7 +51,7 @@
     width: 26%;
     h2 {
       width: 26%;
-      margin-left:20%;
+      margin-left: 20%;
     }
     img {
       border-radius: 100%;
