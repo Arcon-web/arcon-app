@@ -4,9 +4,8 @@
       <router-link to="/menu">
         <img src="../assets/arcon_logo.png" alt="arcon logo">
       </router-link>
-      
-        <img class="profile_pic" src="../assets/boy.jpg" alt="boy">
-      
+
+      <img class="profile_pic" src="../assets/boy.jpg" alt="boy">
     </div>
     <div class="friends">
       <div class="friend">
@@ -40,6 +39,32 @@
     </div>
   </div>
 </template>
+
+<script>
+import axios from 'axios'
+
+export default {
+  data() {
+    return {
+      friends: [],
+    }
+  },
+  async mounted() {
+    const baseUrl = 'https://arcon.mats.vingerhoets.mtantwerp.eu/api'
+    const urls = {
+        friends: `${baseUrl}/friends/1`,
+      }
+    try {
+      const friends = await axios.get(urls.friends)
+      console.log(friends)
+      
+    } catch (error) {
+      console.log(error)
+    }
+  }
+}
+</script>
+
 
 <style lang="scss">
 .friends {
