@@ -52,12 +52,38 @@ export default {
   async mounted() {
     const baseUrl = 'https://arcon.mats.vingerhoets.mtantwerp.eu/api'
     const urls = {
-        friends: `${baseUrl}/friends/1`,
-      }
+      friends: `${baseUrl}/friends/1`,
+      login: `${baseUrl}/login`,
+    }
+    const userdata = {
+      email: 'mats@gmail.com',
+      password: 'secret',
+      console_id: 'abc123',
+    }
+
+    // LOGIN
     try {
-      const friends = await axios.get(urls.friends)
-      console.log(friends)
-      
+      const user = await axios.post(urls.login, {
+        email: userdata.email,
+        password: userdata.password,
+        console_id: userdata.console_id,
+      })
+      const accessToken = user.data.data.access_token
+
+      // GET FRIENDS
+      try {
+        const friends = await axios.get(urls.friends, {
+          headers: {
+            Authorization: `Bearer ${accessToken}`
+          }
+        })
+        console.log(friends)
+
+      // GET FRIENDS FAILED
+      } catch (error) {
+        console.log(error)
+      }
+    // LOGIN FAILED
     } catch (error) {
       console.log(error)
     }
@@ -73,7 +99,7 @@ export default {
     width: 26%;
     h2 {
       width: 26%;
-      margin-left:20%;
+      margin-left: 20%;
     }
     img {
       border-radius: 100%;
