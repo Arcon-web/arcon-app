@@ -8,12 +8,13 @@
       <img class="profile_pic" src="../assets/boy.jpg" alt="boy">
     </div>
     <div class="friends">
-      <Friend name="homer" ext="jpg" class="friend"/>
-      <Friend name="duck" ext="jpg" class="friend"/>
-      <Friend name="dino" ext="png" class="friend"/>
-      <Friend name="jerry" ext="jpg" class="friend"/>
-      <Friend name="blossom" ext="jpg" class="friend"/>
-      <Friend name="felix" ext="png" class="friend"/>
+      <Friend
+        v-for="friend in friends"
+        :key="friend.id"
+        :name="friend.name"
+        :ext="friend.ext"
+        class="friend"
+      />
     </div>
 
     <div class="button">
@@ -28,6 +29,42 @@
 import Friend from '@/components/Friend'
 
 export default {
+  data() {
+    return {
+      friends: [
+        {
+          id: 1,
+          name: 'homer',
+          ext: 'jpg',
+        },
+        {
+          id: 2,
+          name: 'dino',
+          ext: 'png',
+        },
+        {
+          id: 3,
+          name: 'duck',
+          ext: 'jpg',
+        },
+        {
+          id: 4,
+          name: 'blossom',
+          ext: 'jpg',
+        },
+        {
+          id: 5,
+          name: 'felix',
+          ext: 'png',
+        },
+        {
+          id: 6,
+          name: 'jerry',
+          ext: 'jpg',
+        },
+      ],
+    }
+  },
   components: {
       Friend,
   },
