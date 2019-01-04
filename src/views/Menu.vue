@@ -21,7 +21,9 @@
   img {
     margin-bottom: 10%;
   }
-  width: 70vw;
-  margin:auto;
+  width: 90%;
+  margin-left:auto;
+  margin-right: auto;
+  
 }
 </style>

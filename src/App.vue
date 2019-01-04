@@ -11,11 +11,13 @@ body {
 }
 
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "roboto", sans-serif;
   text-align: center;
   color: #000000;
+
+  p{
+    text-decoration: underline;
+  }
 
   .profile_pic {
     border-radius: 100%;

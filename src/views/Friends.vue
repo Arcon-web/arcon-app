@@ -44,18 +44,19 @@
 <style lang="scss">
 .friends {
   .friend {
-    display: inline;
+    display: inline-block;
+    width: 26%;
     h2 {
       width: 26%;
-      display: inline;
+      margin-left:20%;
     }
     img {
       border-radius: 100%;
       display: inline-block;
-      width: 26%;
+      width: 90%;
       margin-right: 4%;
       margin-bottom: 4%;
-      max-height: 135px;
+      max-height: 90px;
     }
   }
 }
