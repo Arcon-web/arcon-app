@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Login from './views/Login.vue'
+import Menu from './views/Menu.vue'
+import Friends from './views/Friends.vue'
 
 Vue.use(Router)
 
@@ -12,6 +14,16 @@ export default new Router({
       path: '/',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/menu',
+      name: 'menu',
+      component: Menu
+    },
+    {
+      path: '/friends',
+      name: 'friends',
+      component: Friends
     }
   ]
 })
