@@ -8,32 +8,12 @@
       <img class="profile_pic" src="../assets/boy.jpg" alt="boy">
     </div>
     <div class="friends">
-      <div class="friend">
-        <router-link to="/homer">
-          <img src="../assets/homer.jpg" alt="friend">
-        </router-link>
-        <h2>Homer</h2>
-      </div>
-      <div class="friend">
-        <img src="../assets/duck.jpg" alt="friend">
-        <h2>Duck</h2>
-      </div>
-      <div class="friend">
-        <img src="../assets/dino.png" alt="friend">
-        <h2>Dino</h2>
-      </div>
-      <div class="friend">
-        <img src="../assets/felix.png" alt="friend">
-        <h2>Cat</h2>
-      </div>
-      <div class="friend">
-        <img src="../assets/Jerry.jpg" alt="friend">
-        <h2>Jerry</h2>
-      </div>
-      <div class="friend">
-        <img src="../assets/Blossom.jpg" alt="friend">
-        <h2>Blossom</h2>
-      </div>
+      <Friend name="homer" ext="jpg" class="friend"/>
+      <Friend name="duck" ext="jpg" class="friend"/>
+      <Friend name="dino" ext="png" class="friend"/>
+      <Friend name="jerry" ext="jpg" class="friend"/>
+      <Friend name="blossom" ext="jpg" class="friend"/>
+      <Friend name="felix" ext="png" class="friend"/>
     </div>
 
     <div class="button">
@@ -43,6 +23,17 @@
     </div>
   </div>
 </template>
+
+<script>
+import Friend from '@/components/Friend'
+
+export default {
+  components: {
+      Friend,
+  },
+}
+</script>
+
 
 <style lang="scss">
 .friends {
