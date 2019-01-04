@@ -6,6 +6,7 @@ import Friends from './views/Friends.vue'
 import Profile from './views/Profile.vue'
 import Homer from './views/Homer.vue'
 import Add from './views/Add.vue'
+import Edit from './views/Edit.vue'
 
 Vue.use(Router)
 
@@ -41,6 +42,11 @@ export default new Router({
       path: '/add',
       name: 'add',
       component: Add
+    },
+    {
+      path: '/edit',
+      name: 'edit',
+      component: Edit
     }
   ]
 })
