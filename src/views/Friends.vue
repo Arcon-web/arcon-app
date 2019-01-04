@@ -8,47 +8,69 @@
       <img class="profile_pic" src="../assets/boy.jpg" alt="boy">
     </div>
     <div class="friends">
-      <div class="friend">
-        <img src="../assets/homer.jpg" alt="friend">
-        <h2>Homer</h2>
-      </div>
-      <div class="friend">
-        <img src="../assets/duck.jpg" alt="friend">
-        <h2>Duck</h2>
-      </div>
-      <div class="friend">
-        <img src="../assets/dino.png" alt="friend">
-        <h2>Dino</h2>
-      </div>
-      <div class="friend">
-        <img src="../assets/felix.png" alt="friend">
-        <h2>Cat</h2>
-      </div>
-      <div class="friend">
-        <img src="../assets/Jerry.jpg" alt="friend">
-        <h2>Jerry</h2>
-      </div>
-      <div class="friend">
-        <img src="../assets/Blossom.jpg" alt="friend">
-        <h2>Blossom</h2>
-      </div>
+      <Friend
+        v-for="friend in friends"
+        :key="friend.id"
+        :name="friend.name"
+        :ext="friend.ext"
+        class="friend"
+      />
     </div>
 
     <div class="button">
-      <img src="../assets/button_add_friend.png" alt="button add friend">
+      <router-link to="/add">
+        <img src="../assets/button_add_friend.png" alt="button add friend">
+      </router-link>
     </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import Friend from '@/components/Friend'
 
 export default {
   data() {
     return {
-      friends: [],
+            friends: [
+        {
+          id: 1,
+          name: 'homer',
+          ext: 'jpg',
+        },
+        {
+          id: 2,
+          name: 'dino',
+          ext: 'png',
+        },
+        {
+          id: 3,
+          name: 'duck',
+          ext: 'jpg',
+        },
+        {
+          id: 4,
+          name: 'blossom',
+          ext: 'jpg',
+        },
+        {
+          id: 5,
+          name: 'felix',
+          ext: 'png',
+        },
+        {
+          id: 6,
+          name: 'jerry',
+          ext: 'jpg',
+        },
+      ],
     }
   },
+  
+  components: {
+      Friend,
+  },
+  
   async mounted() {
     const baseUrl = 'https://arcon.mats.vingerhoets.mtantwerp.eu/api'
     const urls = {
@@ -87,7 +109,7 @@ export default {
     } catch (error) {
       console.log(error)
     }
-  }
+  },
 }
 </script>
 

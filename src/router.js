@@ -4,6 +4,9 @@ import Login from './views/Login.vue'
 import Menu from './views/Menu.vue'
 import Friends from './views/Friends.vue'
 import Profile from './views/Profile.vue'
+import Homer from './views/Homer.vue'
+import Add from './views/Add.vue'
+import Edit from './views/Edit.vue'
 
 Vue.use(Router)
 
@@ -29,6 +32,21 @@ export default new Router({
       path: '/profile',
       name: 'profile',
       component: Profile
+    },
+    {
+      path: '/homer',
+      name: 'homer',
+      component: Homer
+    },
+    {
+      path: '/add',
+      name: 'add',
+      component: Add
+    },
+    {
+      path: '/edit',
+      name: 'edit',
+      component: Edit
     }
   ]
 })
